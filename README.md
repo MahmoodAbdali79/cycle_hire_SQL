@@ -7,10 +7,11 @@ As working with BigQuery and analyzing databases, I find `cycle_hire` from from 
 
 For understand better the dataset, There are some question that I've answered them with SQL. Here is:
 
-- [] how many bike trips lasted for 20 minutes or longer?
-- [] What are the names of the stations that bike_id 1710 started from?
-- [] How many bike_ids have ended at "Moor Street, Soho"?
-- [] What is the station_id for "Canton Street, Poplar"?
-- [] What is the name of the station whose ID is 111?
-- [] How many distinct bike_ids had trip durations greater than 2400 seconds (or 40 minutes)?
+- [x] how many bike trips lasted for 20 minutes or longer?
+- [ ] What are the names of the stations that bike_id 1710 started from?
+- [ ] How many bike_ids have ended at "Moor Street, Soho"?
+- [ ] What is the station_id for "Canton Street, Poplar"?
+- [x] What is the name of the station whose ID is 111?
+- [ ] How many distinct bike_ids had trip durations greater than 2400 seconds (or 40 minutes)?
+- [ ] \(Optional)
 
