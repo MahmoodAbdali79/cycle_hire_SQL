@@ -8,6 +8,11 @@ As working with BigQuery and analyzing databases, I find `cycle_hire` from from 
 For understand better the dataset, There are some question that I've answered them with SQL. Here is:
 
 - [x] how many bike trips lasted for 20 minutes or longer?
+  ```sql
+  SELECT COUNT(*) AS number_of_trips
+  FROM `bigquery-public-data.london_bicycles.cycle_hire`
+  WHERE duration >= 1200;
+  ```
 - [ ] What are the names of the stations that bike_id 1710 started from?
 - [ ] How many bike_ids have ended at "Moor Street, Soho"?
 - [ ] What is the station_id for "Canton Street, Poplar"?
