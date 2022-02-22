@@ -13,6 +13,7 @@ For understand better the dataset, There are some question that I've answered th
   FROM `bigquery-public-data.london_bicycles.cycle_hire`
   WHERE duration >= 1200;
   ```
+  Answer : 7334890 bike trips lasted for 20 minutes or longer
 - [ ] What are the names of the stations that bike_id 1710 started from?
 - [ ] How many bike_ids have ended at "Moor Street, Soho"?
 - [ ] What is the station_id for "Canton Street, Poplar"?
