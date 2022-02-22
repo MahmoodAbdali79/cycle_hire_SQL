@@ -14,10 +14,43 @@ For understand better the dataset, There are some question that I've answered th
   WHERE duration >= 1200;
   ```
   > Answer : 7334890 bike trips lasted for 20 minutes or longer
-- [ ] What are the names of the stations that bike_id 1710 started from?
-- [ ] How many bike_ids have ended at "Moor Street, Soho"?
-- [ ] What is the station_id for "Canton Street, Poplar"?
+  
+- [x] What are the names of the stations that bike_id 1710 started from?
+  ```sql
+  SELECT DISTINCT start_station_name 
+  FROM `bigquery-public-data.london_bicycles.cycle_hire`
+  WHERE bike_id >= 1710;
+  ```
+  > Answer : Atached to this repo
+  
+- [x] How many bike_ids have ended at "Moor Street, Soho"?
+  ```sql
+  SELECT COUNT(DISTINCT bike_id) AS number_of_bikes 
+  FROM `bigquery-public-data.london_bicycles.cycle_hire`
+  WHERE end_station_name = 'Moor Street, Soho';
+  ```
+  > Answer : 13116
+  
+- [x] What is the station_id for "Canton Street, Poplar"?
+  ```sql
+  SELECT DISTINCT start_station_id
+  FROM `bigquery-public-data.london_bicycles.cycle_hire`
+  WHERE start_station_name = 'Canton Street, Poplar';
+  ```
+  > Answer : 487
+  
 - [x] What is the name of the station whose ID is 111?
-- [ ] How many distinct bike_ids had trip durations greater than 2400 seconds (or 40 minutes)?
-- [ ] \(Optional)
-
+  ```sql
+  SELECT DISTINCT start_station_name
+  FROM `bigquery-public-data.london_bicycles.cycle_hire`
+  WHERE start_station_id = 111;
+  ```
+  > Answer : Park Lane , Hyde Park
+  
+- [x] How many distinct bike_ids had trip durations greater than 2400 seconds (or 40 minutes)?
+  ```sql
+  SELECT COUNT( DISTINCT bike_id) AS number_of_bike
+  FROM `bigquery-public-data.london_bicycles.cycle_hire`
+  WHERE duration > 2400
+  ```
+  > Answer : 13678 bikes
