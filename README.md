@@ -54,3 +54,41 @@ For understand better the dataset, There are some question that I've answered th
   WHERE duration > 2400
   ```
   > Answer : 13678 bikes
+
+- [x] Find every place involving with 'Albert'
+  ```sql
+  SELECT DISTINCT  end_station_name 
+  FROM `bigquery-public-data.london_bicycles.cycle_hire` 
+  WHERE end_station_name LIKE '%Albert%'
+  ```
+  > Answer : Some of them atached to this repo as Albert
+  
+- [x] show bike_id and duration that their duration are between 4000 and 5000
+  ```sql
+  SELECT DISTINCT  bike_id , duration
+  FROM `bigquery-public-data.london_bicycles.cycle_hire` 
+  WHERE duration BETWEEN 5000 and 6000; 
+  ```
+  > Answer : Some of them atached to this repo as 4000-5000
+
+- [x] 20 the longest duration traveled
+  ```sql
+  SELECT DISTINCT  bike_id , SUM(duration) as durations
+  FROM `bigquery-public-data.london_bicycles.cycle_hire` 
+  GROUP BY bike_id
+  ORDER BY durations DESC 
+  LIMIT 20;
+  ```
+  > Answer : Some of them atached to this repo as durations_1
+
+- [x] 10 people who traveled less than 2,000 duration
+  ```sql
+  SELECT DISTINCT  bike_id , SUM(duration) as durations
+  FROM `bigquery-public-data.london_bicycles.cycle_hire` 
+  GROUP BY bike_id
+  HAVING SUM(duration) < 2000
+  LIMIT 10;
+  ```
+  > Answer : Some of them atached to this repo as durations_2
+
+
